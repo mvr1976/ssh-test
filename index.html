@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loftblog test</title>
+	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">	
+	<link rel="stylesheet" href="style.css">
+	<script src = "bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+	<wrapper>
+		<header>
+		<div class="head-container">
+			<img src="img/logo.png" alt="#" class="logo">
+			<ul class="socials">
+				<li class="vk"><a href="#"></a></li>
+				<li class="twitter"><a href="#"></a></li>
+				<li class="facebook"><a href="#"></a></li>
+				<li class="github"><a href="#"></a></li>
+			</ul>
+		</div>
+								
+		</header>
+		<div class="main">
+			<section>
+				<article>
+					<h3>Опыт работы</h3>
+					<hr>								
+					<div class="content">
+						<img src="img/work.png" alt="#">
+						<p class="work">"ИП Боровицкий" - Продавец дисков</p>
+						<p>Сентябрь 2005 - Август 2008</p>														
+					</div>
+									
+					<div class="content">
+						<img src="img/work.png" alt="#">					
+						<p class="work">"ООО Системы безопасности" - Системный администратор</p>
+						<p>Июнь 2008 - Июль 2010</p>						
+					</div>
+					
+				</article>
+				<article>
+					<h3>Образование</h3>
+					<hr>
+					
+					<div class="content">
+						<img src="img/education1.png" alt="#">
+						<p class="work">Незаконченное высшее СПБГУ ИТМО </p>
+						<p>Октябрь 2012 - по настоящее время</p>
+						
+					</div>
+					<div class="content">
+						<img src="img/education2.png" alt="#">						
+						<p class="work">Курсы Loftschool.ru </p>
+						<p>Ноябрь 2014- по настоящее время</p>						
+												
+					</div>
+					
+				</article>
+			</section>
+		
+			<aside>
+				<ul>
+					<li class = "active"><a href="#">Обо мне</a></li>
+					<li><a href="#">Мои работы</a></li>
+					<li><a href="#">Связаться со мной</a></li>
+				</ul>
+			</aside>
+		</div>
+		<footer>
+			<p>&copy2016 Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>			
+		</footer>
+	</wrapper>
+	<script>
+		$(function(){
+			$('aside li').on('click', function(e){
+				e.preventDefault();
+				var activeLink = $(this).closest('aside li');
+				activeLink.addClass('active')
+				.siblings().removeClass('active');
+			});
+		});
+	</script>
+</body>
+</html>
